@@ -1,0 +1,23 @@
+sudo: required
+
+language: node_js
+
+node_js:
+  - "6"
+
+services:
+  - docker
+
+install:
+  - npm install --production
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    export REPO=bellstrand/cors-request-proxy;
+    docker build -f Dockerfile -t $REPO:latest .;
+    docker push $REPO;
+    fi
+
+notifications:
+  email: false
