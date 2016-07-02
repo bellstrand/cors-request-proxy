@@ -6,6 +6,6 @@
 ## Commands
 
 ```bash
-npm run dev #starts development server
-npm build #build and outputs build to ./dist
+npm run start # starts a server
+npm run dev # starts development server
 ```
