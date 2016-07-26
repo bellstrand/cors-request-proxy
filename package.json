@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/bellstrand/cors-request-proxy",
   "dependencies": {
-    "request": "^2.72.0"
+    "request": "^2.74.0"
   },
   "devDependencies": {
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.10.0"
   }
 }
