@@ -1,6 +1,6 @@
 {
   "name": "cors-request-proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CORS Request Proxy",
   "main": "src/index.js",
   "repository": {
